@@ -1,0 +1,111 @@
+/* Eric Meyer's CSS Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   This is a Sass partial
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.container {
+  margin: 0 auto;
+  width: 350px;
+  height: 280px;
+  border: 1px solid gray;
+  position: relative;
+  margin-top: 50px;
+  border-radius: 5px; }
+
+#messageBox {
+  text-align: center;
+  padding: 20px 20px 0 20px;
+  font-size: 20px;
+  font-family: "Open Sans", sans-serif;
+  color: #444444; }
+
+#roundInfo {
+  text-align: center;
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+  padding: 5px; }
+
+.dice {
+  float: left;
+  overflow: hidden;
+  margin-top: 15px; }
+  .dice div {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #444444;
+    float: right;
+    margin-left: 50px;
+    background: #DDDDDD; }
+    .dice div p {
+      text-align: center;
+      font-size: 30px;
+      padding-top: 36px;
+      font-family: "Open Sans", sans-serif; }
+
+button {
+  position: absolute;
+  bottom: 40px;
+  left: 175px;
+  transform: translateX(-50%);
+  background: #444444;
+  font-size: 20px;
+  color: white;
+  border-radius: 10px;
+  padding: 5px 15px;
+  font-family: "Open Sans", sans-serif; }
+
+#gameInfo {
+  position: absolute;
+  bottom: 10px;
+  left: 175px;
+  transform: translateX(-50%);
+  margin-top: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px; }
+
+/*# sourceMappingURL=main.css.map */

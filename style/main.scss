@@ -1,0 +1,83 @@
+//imports
+@import "partials/reset";
+
+//variables
+$font: 'Open Sans', sans-serif;
+$font-color: #444444;
+$info-font-size: 12px;
+
+//Mixins
+@mixin center {
+  left: 175px;
+  transform: translateX(-50%);
+}
+
+
+.container {
+  margin: 0 auto;
+  width: 350px;
+  height: 280px;
+  border: 1px solid gray;
+  position: relative;
+  margin-top: 50px;
+  border-radius: 5px;
+}
+
+#messageBox {
+  text-align: center;
+  padding: 20px 20px 0 20px;
+  font-size: 20px;
+  font-family:$font;
+  color: $font-color;
+}
+
+#roundInfo {
+  text-align: center;
+  font-size: $info-font-size;
+  font-family: $font;
+  color: $font-color;
+  padding: 5px;
+}
+
+.dice {
+  float: left;
+  overflow: hidden;
+  margin-top: 15px;
+
+  div {
+    width: 100px;
+    height: 100px;
+    border: 1px solid $font-color;
+    float: right;
+    margin-left: 50px;
+    background: #DDDDDD;
+
+    p {
+      text-align: center;
+      font-size: 30px;
+      padding-top: 36px;
+      font-family: $font;
+    }
+  }
+}
+
+button {
+  position:absolute;
+  bottom: 40px;
+  @include center;
+  background: $font-color;
+  font-size: 20px;
+  color: white;
+  border-radius: 10px;
+  padding: 5px 15px;
+  font-family: $font;
+}
+
+#gameInfo {
+  position: absolute;
+  bottom: 10px;
+  @include center;
+  margin-top: 10px;
+  font-family: $font;
+  font-size: $info-font-size;
+}

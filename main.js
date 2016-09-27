@@ -1,11 +1,13 @@
 var diceGame = {
     rolls: [],
+    startTime: 0,
     regions: {
         die1: null,
         die2: null,
         btn: null,
         gameInfo: null,
-        roundInfo: null
+        roundInfo: null,
+        message: null
     },
 
     values: {
@@ -22,6 +24,7 @@ var diceGame = {
         this.regions.die2 = document.getElementById('die2');
         this.regions.btn = document.getElementById('btn');
         this.regions.roundInfo = document.getElementById('roundInfo');
+        this.regions.message = document.getElementById('messageBox');
 
     },
 
@@ -33,9 +36,10 @@ var diceGame = {
         var currentMinute = currentStartTime.getMinutes();
         var currentSeconds = currentStartTime.getSeconds();
         var currentStartTimeString = 'Game started ' + currentMonth + '/' + currentDate + ' ' + currentHour + ':' + currentMinute + ':' + currentSeconds;
-
-        this.values.gameInfo = currentStartTimeString;
-        diceGame.regions.gameInfo.innerHTML = this.values.gameInfo;
+        // log start time and plug it into startTime property.
+        this.startTime = currentStartTimeString;
+        diceGame.regions.gameInfo.innerHTML = this.startTime;
+        // log same start time number data type into gameInfo value as gameStartLog to use in gameStats function.
         var gameStartLog = currentStartTime;
         this.values.gameInfo = gameStartLog;
     },
@@ -66,19 +70,26 @@ var diceGame = {
             var currentTime = new Date();
             var currentTimeMs = currentTime;
 
-            var roundSeconds = (currentTimeMs - gameStartLog) / 1000;
+            var roundSeconds = Math.round((currentTimeMs - gameStartLog) / 1000);
 
             //2. get roll amount
             var rollAmount = (this.rolls.length);
-
             //3. print gameStats to html
             var roundInfo = "It took you " + rollAmount + " tries and " + roundSeconds + " seconds.";
             this.values.roundInfo = roundInfo;
             this.regions.roundInfo.innerHTML = this.values.roundInfo;
 
-        } 
+            //4. alert player of win
+            var winMessage = "Winner!";
+            this.values.message = winMessage;
+            this.regions.message.innerHTML = this.values.message;
 
+        } else {
+          var loseMessage = "Try Again";
+          this.values.message = loseMessage;
+          this.regions.message.innerHTML = this.values.message;
         }
+
 
     },
 

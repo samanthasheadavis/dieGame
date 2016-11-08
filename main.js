@@ -99,6 +99,6 @@ var diceGame = {
 
         this.regions.btn.addEventListener('click', this.rollDice.bind(this));
     }
-}
+};
 
 diceGame.init();

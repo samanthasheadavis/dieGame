@@ -9,7 +9,7 @@ The game is a single JavaScript object that stores:
 * A `rollDice` method for rolling the dice which generates a random number between 1 and 6 and displays it on the dice.
 * a `gameStats` method that checks to see if a seven or eleven has been rolled, calculates time elapsed, counts number of rolls and prints stats to screen once the user has won.
 
-[See it on Github Pages](https://samanthasheadavis.github.io/asteroids/)
+[See it on Github Pages](https://samanthasheadavis.github.io/dieGame/)
 #### Languages/Tools
 * JavaScript
 * HTML5
